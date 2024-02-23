@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import ReactQuill from "react-quill";
+
 import "react-quill/dist/quill.bubble.css";
 import { FiPlusCircle } from "react-icons/fi";
 import { FiImage } from "react-icons/fi";
@@ -19,12 +19,15 @@ import { app } from "../utils/firebase";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import data from "@/app/shared/data";
+import dynamic from "next/dynamic";
 
 const storage = getStorage(app);
 
 const CreatePage = () => {
   const { status } = useSession();
   const router = useRouter();
+
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [file, setFile] = useState(null);
   const [open, setOpen] = useState(false);
