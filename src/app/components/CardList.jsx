@@ -4,9 +4,12 @@ import Pagination from "./Pagination";
 import CardSkeleton from "./Loading/CardSkeleton";
 
 const getPostData = async (page, cat) => {
-  const res = await fetch(`/api/posts?page=${page}&cat=${cat || ""}`, {
-    cache: "no-store"
-  });
+  const res = await fetch(
+    `https://quantum-topaz.vercel.app/api/posts?page=${page}&cat=${cat || ""}`,
+    {
+      cache: "no-store"
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed");

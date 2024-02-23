@@ -3,9 +3,12 @@ import CardList from "../components/CardList";
 import SubCategoriesMenu from "../components/categories/SubCategoriesMenu";
 
 const getData = async (cat) => {
-  const res = await fetch(`/api/subcategories?cat=${cat}`, {
-    cache: "no-store"
-  });
+  const res = await fetch(
+    `https://quantum-topaz.vercel.app/api/subcategories?cat=${cat}`,
+    {
+      cache: "no-store"
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed");

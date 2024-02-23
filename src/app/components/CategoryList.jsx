@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 const getData = async () => {
-  const res = await fetch("/api/categories", {
+  const res = await fetch("https://quantum-topaz.vercel.app/api/categories", {
     cache: "no-store"
   });
 
