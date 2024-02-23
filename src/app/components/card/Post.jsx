@@ -6,12 +6,9 @@ import { BsDot } from "react-icons/bs";
 import Tag from "../tag/Tag";
 
 const getAuthorData = async (slug) => {
-  const res = await fetch(
-    `https://quantum-topaz.vercel.app/api/posts/${slug}`,
-    {
-      cache: "no-store"
-    }
-  );
+  const res = await fetch(`/api/posts/${slug}`, {
+    cache: "no-store"
+  });
 
   if (!res.ok) {
     throw new Error("Failed");
