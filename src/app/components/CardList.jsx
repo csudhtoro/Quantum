@@ -5,7 +5,7 @@ import CardSkeleton from "./Loading/CardSkeleton";
 
 const getPostData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `https://quantum-topaz.vercel.app/api/posts?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store"
     }

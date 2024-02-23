@@ -7,7 +7,7 @@ const Tag = ({ item }) => {
   const router = useRouter();
 
   const sendDataToServer = (item) => {
-    router.push(`http://localhost:3000/tags?filter=${item}`);
+    router.push(`https://quantum-topaz.vercel.app/tags?filter=${item}`);
   };
 
   return (

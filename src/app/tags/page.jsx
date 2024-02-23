@@ -2,9 +2,12 @@ import Post from "../components/card/Post";
 import { LuGhost } from "react-icons/lu";
 
 const getFilterPostData = async (filter) => {
-  const res = await fetch(`http://localhost:3000/api/tags?filter=${filter}`, {
-    cache: "no-store"
-  });
+  const res = await fetch(
+    `https://quantum-topaz.vercel.app/api/tags?filter=${filter}`,
+    {
+      cache: "no-store"
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed");

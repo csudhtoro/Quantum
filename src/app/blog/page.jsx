@@ -4,7 +4,7 @@ import SubCategoriesMenu from "../components/categories/SubCategoriesMenu";
 
 const getData = async (cat) => {
   const res = await fetch(
-    `http://localhost:3000/api/subcategories?cat=${cat}`,
+    `https://quantum-topaz.vercel.app/api/subcategories?cat=${cat}`,
     {
       cache: "no-store"
     }
