@@ -16,18 +16,20 @@ import {
   getDownloadURL
 } from "firebase/storage";
 import { app } from "../utils/firebase";
-import Select from "react-select";
-import makeAnimated from "react-select/animated";
 import data from "@/app/shared/data";
 import dynamic from "next/dynamic";
 
 const storage = getStorage(app);
 
 const CreatePage = () => {
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+  const Select = dynamic(() => import("react-select"), { ssr: false });
+  const makeAnimated = dynamic(() => import("react-select/animated"), {
+    ssr: false
+  });
+
   const { status } = useSession();
   const router = useRouter();
-
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [file, setFile] = useState(null);
   const [open, setOpen] = useState(false);
