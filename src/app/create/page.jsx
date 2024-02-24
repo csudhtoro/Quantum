@@ -88,22 +88,50 @@ const CreatePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
-      method: "POST",
-      body: JSON.stringify({
-        title,
-        desc: value,
-        img: media,
-        slug: slugify(title),
-        catSlug: catSlug.label || "style",
-        tag: tag.label || "Art"
-      })
-    });
-    if (res.status === 200) {
-      const data = await res.json();
-      console.log("Response Data: ", data);
+    // const res = await fetch("/api/posts", {
+    //   method: "POST",
+    //   body: JSON.stringify({
+    //     title,
+    //     desc: value,
+    //     img: media,
+    //     slug: slugify(title),
+    //     catSlug: catSlug.label || "style",
+    //     tag: tag.label || "Art"
+    //   })
+    // });
+    // if (res.status === 200) {
+    //   const data = await res.json();
+    //   console.log("Response Data: ", data);
 
-      router.push(`/posts/${data.slug}`);
+    //   router.push(`/posts/${data.slug}`);
+    // }
+    try {
+      if (!title || !value || !media || !catSlug || !tag) {
+        throw new Error("Required fields are missing.");
+      }
+
+      const res = await fetch("/api/posts", {
+        method: "POST",
+        body: JSON.stringify({
+          title,
+          desc: value,
+          img: media,
+          slug: slugify(title),
+          catSlug: catSlug.label || "style",
+          tag: tag.label || "Art"
+        })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        console.log("Post created successfully:", data);
+        router.push(`/posts/${data.slug}`);
+      } else {
+        throw new Error("Failed to create post.");
+      }
+    } catch (error) {
+      console.error("Error creating post:", error);
+      // Handle error condition
     }
   };
 
