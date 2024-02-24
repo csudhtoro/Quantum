@@ -11,18 +11,20 @@ const Footer = () => {
             Quantum™
           </a>
           . All Rights Reserved.
-          <p className="text-[0.65rem] text-gray-600">
-            Icons by{" "}
-            <Link href="https://www.freepik.com" target="_blank">
-              <span className="text-blue-900 font-bold">Freepik</span>{" "}
-            </Link>
-          </p>
-          <p className="text-[0.65rem] text-gray-600">
-            Image provided by{" "}
-            <Link href="https://www.unsplash.com" target="_blank">
-              <span className="text-blue-900 font-bold">Unsplash</span>{" "}
-            </Link>
-          </p>
+          <div className="flex items-center justify-between">
+            <p className="text-[0.65rem] text-gray-600">
+              Icons by{" "}
+              <Link href="https://www.freepik.com" target="_blank">
+                <span className="text-blue-900 font-bold">Freepik</span>{" "}
+              </Link>
+            </p>
+            <p className="text-[0.65rem] text-gray-600">
+              Image provided by{" "}
+              <Link href="https://www.unsplash.com" target="_blank">
+                <span className="text-blue-900 font-bold">Unsplash</span>{" "}
+              </Link>
+            </p>
+          </div>
         </span>
         <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-900 dark:text-white sm:mt-0">
           <li>
