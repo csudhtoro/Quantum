@@ -118,7 +118,7 @@ const CreatePage = () => {
           img: media,
           slug: slugify(title),
           catSlug: catSlug.label || "style",
-          tag: tag.label || "Art"
+          subCategory: tag.label || "Art"
         })
       });
 
