@@ -11,7 +11,7 @@ const Footer = () => {
             Quantum™
           </a>
           . All Rights Reserved.
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-start">
             <p className="text-[0.65rem] text-gray-600">
               Icons by{" "}
               <Link href="https://www.freepik.com" target="_blank">
