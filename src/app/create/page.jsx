@@ -101,6 +101,8 @@ const CreatePage = () => {
     });
     if (res.status === 200) {
       const data = await res.json();
+      console.log("Response Data: ", data);
+
       router.push(`/posts/${data.slug}`);
     }
   };
