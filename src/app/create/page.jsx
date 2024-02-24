@@ -20,14 +20,13 @@ import data from "@/app/shared/data";
 import dynamic from "next/dynamic";
 
 const storage = getStorage(app);
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+const Select = dynamic(() => import("react-select"), { ssr: false });
+const makeAnimated = dynamic(() => import("react-select/animated"), {
+  ssr: false
+});
 
 const CreatePage = () => {
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
-  const Select = dynamic(() => import("react-select"), { ssr: false });
-  const makeAnimated = dynamic(() => import("react-select/animated"), {
-    ssr: false
-  });
-
   const { status } = useSession();
   const router = useRouter();
 
