@@ -88,23 +88,6 @@ const CreatePage = () => {
       .replace(/^-+|-+$/g, "");
 
   const handleSubmit = async () => {
-    // const res = await fetch("/api/posts", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     title,
-    //     desc: value,
-    //     img: media,
-    //     slug: slugify(title),
-    //     catSlug: catSlug.label || "style",
-    //     tag: tag.label || "Art"
-    //   })
-    // });
-    // if (res.status === 200) {
-    //   const data = await res.json();
-    //   console.log("Response Data: ", data);
-
-    //   router.push(`/posts/${data.slug}`);
-    // }
     try {
       if (!title || !value || !media || !catSlug || !tag) {
         throw new Error("Required fields are missing.");
@@ -218,7 +201,7 @@ const CreatePage = () => {
         />
       </div>
       <button
-        className=" text-xs bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold  absolute top-[12.5rem] left-[1.3rem] sm:top-[13rem] sm:left-[1.8rem] md:top-[9rem] md:left-[2.5rem] lg:top-[10rem] lg:left-[3rem] px-4 py-2 border-none rounded-full"
+        className="fixed right-5 bottom-5 text-xs bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold top-[12.5rem] left-[1.3rem] sm:top-[13rem] sm:left-[1.8rem] md:top-[9rem] md:left-[2.5rem] lg:top-[10rem] lg:left-[3rem] px-4 py-2 border-none rounded-full"
         onClick={handleSubmit}
       >
         Publish
