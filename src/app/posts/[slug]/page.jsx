@@ -5,6 +5,7 @@ import moment from "moment";
 import { GoEye } from "react-icons/go";
 import { BsDot } from "react-icons/bs";
 import placeholder from "../../../../public/images/placeholder.png";
+import user from "../../../../public/images/user.png";
 
 const getData = async (slug) => {
   const res = await fetch(
@@ -36,15 +37,17 @@ const SinglePage = async ({ params }) => {
           </div>
           <div className="w-full max-w-[52rem] py-5 md:p-5 flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
             <span className="flex items-center justify-between gap-2 text-[.6rem]">
-              {data?.user.image && (
-                <Image
-                  src={data?.user.image}
-                  width={50}
-                  height={50}
-                  alt="user image"
-                  className="w-8 h-8 rounded-full object-cover"
-                />
-              )}
+              {data.user.image
+                ? data?.user.image && (
+                    <Image
+                      src={data?.user.image}
+                      width={50}
+                      height={50}
+                      alt="user image"
+                      className="w-8 h-8 rounded-full object-cover"
+                    />
+                  )
+                : user}
               <div className="flex flex-col md:flex-row items-start md:items-center">
                 <p className="text-gray-900 dark:text-gray-200 text-[0.6rem] sm:text-xs font-semibold">
                   {data?.user.name}
