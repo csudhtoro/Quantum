@@ -13,13 +13,13 @@ const Footer = () => {
           . All Rights Reserved.
           <div className="flex items-center justify-start gap-3">
             <p className="text-[0.65rem] text-gray-600">
-              Icons by{" "}
+              Icons provided by{" "}
               <Link href="https://www.freepik.com" target="_blank">
                 <span className="text-blue-900 font-bold">Freepik</span>{" "}
               </Link>
             </p>
             <p className="text-[0.65rem] text-gray-600">
-              Image provided by{" "}
+              Images provided by{" "}
               <Link href="https://www.unsplash.com" target="_blank">
                 <span className="text-blue-900 font-bold">Unsplash</span>{" "}
               </Link>
