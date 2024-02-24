@@ -4,6 +4,7 @@ import Comments from "../../components/comments/Comments";
 import moment from "moment";
 import { GoEye } from "react-icons/go";
 import { BsDot } from "react-icons/bs";
+import placeholder from "../../../../public/images/placeholder.png";
 
 const getData = async (slug) => {
   const res = await fetch(
@@ -75,7 +76,7 @@ const SinglePage = async ({ params }) => {
             {data?.img && (
               <Image
                 className="rounded-lg object-cover w-fit max-h-[40rem]"
-                src={data.img}
+                src={data.img ? data.img : placeholder}
                 alt="activity image"
                 width={800}
                 height={600}
