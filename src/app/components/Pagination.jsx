@@ -9,7 +9,7 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
   return (
     <div className="px-4 py-2 flex justify-between w-full">
       <button
-        className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed cursor-pointer rounded-lg"
+        className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed cursor-pointer rounded-lg active:scale-105"
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`, { scroll: false })}
       >
@@ -18,16 +18,16 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
             size={20}
             className="text-white dark:text-gray-900 group-hover:-translate-x-1 transition"
           />
-          <p className="group-hover:scale-105">Prev</p>
+          <p className="group-hover:scale-110">Prev</p>
         </div>
       </button>
       <button
-        className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed"
+        className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg disabled:bg-gray-400 dark:disabled:bg-gray-700 disabled:cursor-not-allowed active:scale-105"
         disabled={!hasNext}
         onClick={() => router.push(`?page=${page + 1}`, { scroll: false })}
       >
         <div className="flex gap-2 items-center">
-          <p className="group-hover:scale-105">Next</p>
+          <p className="group-hover:scale-110">Next</p>
           <GrFormNextLink
             size={20}
             className="text-white dark:text-gray-900 group-hover:translate-x-1 transition"
