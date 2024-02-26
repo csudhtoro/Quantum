@@ -13,10 +13,10 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
         disabled={!hasPrev}
         onClick={() => router.push(`?page=${page - 1}`, { scroll: false })}
       >
-        <div className="flex gap-2 items-center">
+        <div className="group flex gap-2 items-center">
           <GrFormPreviousLink
             size={20}
-            className="text-white dark:text-gray-900 hover:translate-x-1 transition"
+            className="text-white dark:text-gray-900 group-hover:-translate-x-1 transition"
           />
           Prev
         </div>
@@ -26,11 +26,11 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
         disabled={!hasNext}
         onClick={() => router.push(`?page=${page + 1}`, { scroll: false })}
       >
-        <div className="flex gap-2 items-center">
+        <div className="group flex gap-2 items-center">
           Next
           <GrFormNextLink
             size={20}
-            className="text-white dark:text-gray-900 hover:translate-x-1 transition"
+            className="text-white dark:text-gray-900 group-hover:translate-x-1 transition"
           />
         </div>
       </button>
