@@ -18,7 +18,7 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
             size={20}
             className="text-white dark:text-gray-900 group-hover:-translate-x-1 transition"
           />
-          <p className="group-hover:scale-110">Prev</p>
+          <p>Prev</p>
         </div>
       </button>
       <button
@@ -27,7 +27,7 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
         onClick={() => router.push(`?page=${page + 1}`, { scroll: false })}
       >
         <div className="flex gap-2 items-center">
-          <p className="group-hover:scale-110">Next</p>
+          <p>Next</p>
           <GrFormNextLink
             size={20}
             className="text-white dark:text-gray-900 group-hover:translate-x-1 transition"
