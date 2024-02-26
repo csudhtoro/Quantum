@@ -16,7 +16,7 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
         <div className="flex gap-2 items-center">
           <GrFormPreviousLink
             size={20}
-            className="text-white dark:text-gray-900"
+            className="text-white dark:text-gray-900 hover:translate-x-1 transition"
           />
           Prev
         </div>
@@ -28,7 +28,10 @@ const Pagination = ({ page, hasPrev, hasNext }) => {
       >
         <div className="flex gap-2 items-center">
           Next
-          <GrFormNextLink size={20} className="text-white dark:text-gray-900" />
+          <GrFormNextLink
+            size={20}
+            className="text-white dark:text-gray-900 hover:translate-x-1 transition"
+          />
         </div>
       </button>
     </div>
