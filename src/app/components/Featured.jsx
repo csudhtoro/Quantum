@@ -34,7 +34,7 @@ const Featured = () => {
               media and optimize your website for maximum visibility and
               engagement.
             </p>
-            <button className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg active:scale-105">
+            <button className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg active:scale-105 mx-auto w-[20rem] lg:mx-0 lg:mr-auto lg:max-w-fit">
               <div className="flex gap-2 items-center">
                 <p>Read More</p>
                 <GrFormNextLink
