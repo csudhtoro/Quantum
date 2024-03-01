@@ -1,12 +1,26 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DropdownMenu from "./DropdownMenu";
 
 const UserIcon = ({ userImg }) => {
   const [openProfile, setOpenProfile] = useState(false);
+  let subMenuRef = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!subMenuRef.current.contains(e.target)) {
+        setOpenProfile(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
 
   return (
-    <div>
+    <div ref={subMenuRef}>
       <Image
         src={userImg}
         alt="user_pic"
