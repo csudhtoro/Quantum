@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { GrFormNextLink } from "react-icons/gr";
 
 const Featured = () => {
   return (
@@ -33,8 +34,14 @@ const Featured = () => {
               media and optimize your website for maximum visibility and
               engagement.
             </p>
-            <button className="text-xs px-6 py-4 my-3 rounded-lg bg-gray-900 dark:bg-gray-200 text-gray-200 dark:text-gray-900 font-semibold mx-auto w-[20rem] lg:mx-0 lg:mr-auto lg:max-w-fit">
-              Read More
+            <button className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg active:scale-105">
+              <div className="flex gap-2 items-center">
+                <p>Read More</p>
+                <GrFormNextLink
+                  size={20}
+                  className="text-white dark:text-gray-900 group-hover:translate-x-1 transition"
+                />
+              </div>
             </button>
           </div>
         </div>
