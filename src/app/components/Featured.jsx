@@ -24,13 +24,14 @@ const Featured = () => {
           </div>
           <div className="text-lg sm:text-xl flex-1 flex flex-col gap-5 max-w-[50rem]">
             <h2 className="max-w-prose font-bold text-gray-900 dark:text-gray-200">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+              Boost Your Online Presence: Social Media and Website Optimization
+              Tips
             </h2>
             <p className="mx-auto lg:container text-sm sm:text-md text-gray-700 dark:text-slate-200 max-w-prose">
-              Lorem Ipsum has been the industry standard dummy text ever since
-              the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Discover actionable strategies to skyrocket your business online
+              presence in our latest blog post. Learn how to leverage social
+              media and optimize your website for maximum visibility and
+              engagement.
             </p>
             <button className="text-xs px-6 py-4 my-3 rounded-lg bg-gray-900 dark:bg-gray-200 text-gray-200 dark:text-gray-900 font-semibold mx-auto w-[20rem] lg:mx-0 lg:mr-auto lg:max-w-fit">
               Read More
