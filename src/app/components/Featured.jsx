@@ -7,9 +7,9 @@ const Featured = () => {
       <div className="mt-[30px] mx-auto p-4 text-center lg:text-start">
         <h1 className="text-3xl sm:text-4xl md:text-5xl max-w-prose text-gray-900 dark:text-gray-200">
           <b className="text-gray-900 dark:text-gray-200">
-            Unlocking the Power of Possibility:{" "}
+            Unleash Your Business Online Potential:{" "}
           </b>
-          Explore Life&apos;s Limitless Horizons
+          Mastering Social Media and Website Optimization
         </h1>
         <div className="mt-8 md:mt-16 flex flex-col lg:flex-row items-center gap-8">
           <div className="">
