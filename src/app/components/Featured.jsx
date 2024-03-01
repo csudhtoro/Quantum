@@ -35,7 +35,7 @@ const Featured = () => {
               engagement.
             </p>
             <button className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg active:scale-105 mx-auto w-[20rem] lg:mx-0 lg:mr-auto lg:max-w-fit">
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center justify-center">
                 <p>Read More</p>
                 <GrFormNextLink
                   size={20}
