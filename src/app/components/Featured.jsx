@@ -36,7 +36,7 @@ const Featured = () => {
             </p>
             <button className="group text-xs px-6 py-4 bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 font-semibold cursor-pointer rounded-lg active:scale-105 mx-auto w-fit lg:mx-0 lg:mr-auto lg:max-w-fit">
               <div className="flex gap-2 items-center justify-center">
-                <p>Read More</p>
+                <p className="text-white dark:text-gray-900">Read More</p>
                 <GrFormNextLink
                   size={20}
                   className="text-white dark:text-gray-900 group-hover:translate-x-1 transition"
