@@ -3,7 +3,7 @@ import { LuGhost } from "react-icons/lu";
 
 const getFilterPostData = async (filter) => {
   const res = await fetch(
-    `https://quantum-topaz.vercel.app/api/tags?filter=${filter}`,
+    `https://quantum-blogspace.vercel.app/api/tags?filter=${filter}`,
     {
       cache: "no-store"
     }

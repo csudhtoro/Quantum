@@ -25,14 +25,14 @@ const Comments = ({ postSlug }) => {
   const { status } = useSession();
 
   const { data, mutate, isLoading } = useSWR(
-    `https://quantum-topaz.vercel.app/api/comments?postSlug=${postSlug}`,
+    `https://quantum-blogspace.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher
   );
 
   const [desc, setDesc] = useState("");
 
   const handleSubmit = async () => {
-    await fetch("https://quantum-topaz.vercel.app/api/comments", {
+    await fetch("https://quantum-blogspace.vercel.app/api/comments", {
       method: "POST",
       body: JSON.stringify({ desc, postSlug })
     });

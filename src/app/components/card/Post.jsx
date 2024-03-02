@@ -7,7 +7,7 @@ import Tag from "../tag/Tag";
 
 const getAuthorData = async (slug) => {
   const res = await fetch(
-    `https://quantum-topaz.vercel.app/api/posts/${slug}`,
+    `https://quantum-blogspace.vercel.app/api/posts/${slug}`,
     {
       cache: "no-store"
     }

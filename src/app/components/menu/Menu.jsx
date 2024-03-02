@@ -4,9 +4,12 @@ import data from "@/app/shared/data";
 import Tags from "../tag/Tags";
 
 const getData = async () => {
-  const res = await fetch("https://quantum-topaz.vercel.app/api/categories", {
-    cache: "no-store"
-  });
+  const res = await fetch(
+    "https://quantum-blogspace.vercel.app/api/categories",
+    {
+      cache: "no-store"
+    }
+  );
 
   if (!res.ok) {
     throw new Error("Failed");

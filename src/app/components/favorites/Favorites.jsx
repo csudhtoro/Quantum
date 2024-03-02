@@ -11,7 +11,7 @@ const Favorites = ({ currFav, postSlug, item }) => {
   //add favorite to db
   const addFavorite = async () => {
     await fetch(
-      `https://quantum-topaz.vercel.app/api/favorites?postSlug=${postSlug}`,
+      `https://quantum-blogspace.vercel.app/api/favorites?postSlug=${postSlug}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -24,7 +24,7 @@ const Favorites = ({ currFav, postSlug, item }) => {
   //remove favorite from db
   const deleteFavorite = async () => {
     await fetch(
-      `https://quantum-topaz.vercel.app/api/favorites?postSlug=${postSlug}`,
+      `https://quantum-blogspace.vercel.app/api/favorites?postSlug=${postSlug}`,
       {
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
