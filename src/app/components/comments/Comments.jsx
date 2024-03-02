@@ -52,7 +52,7 @@ const Comments = ({ postSlug }) => {
             cols="10"
             rows="3"
             placeholder="Write A Comment..."
-            className="w-full border border-gray-200 dark:border-gray-800 rounded-md p-3 dark:bg-gray-700"
+            className="text-gray-900 w-full border border-gray-200 dark:border-gray-800 rounded-md p-3 dark:bg-gray-700"
             onChange={(e) => setDesc(e.target.value)}
           />
           <button
@@ -86,12 +86,15 @@ const Comments = ({ postSlug }) => {
                 <p className="text-gray-900 dark:text-gray-200 text-xs font-semibold">
                   {item.user.name}
                 </p>
-                <div className="text-[0.6rem] font-semibold">
+                <div className="text-gray-900 dark:text-gray-200 text-[0.6rem] font-semibold">
                   {moment(item.createdAt.substring(0, 10)).format("MM.DD.YYYY")}
                 </div>
               </div>
             </div>{" "}
-            <p className="text-sm py-2 max-w-prose"> {item.desc}</p>
+            <p className="text-gray-900 text-sm py-2 max-w-prose">
+              {" "}
+              {item.desc}
+            </p>
           </div>
         ))
       )}
