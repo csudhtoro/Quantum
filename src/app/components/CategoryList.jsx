@@ -22,7 +22,7 @@ const CategoryList = async () => {
         {data?.map((item) => (
           <Link
             href={`/blog?cat=${item.slug}`}
-            className="text-sm text-gray-900 w-full sm:w-[45%] md:w-[30%] lg:w-[15%] flex justify-center items-center gap-2 px-12 py-4 rounded-lg font-semibold hover:opacity-80 active:scale-105"
+            className="text-sm text-gray-900 w-full sm:w-[45%] md:w-[30%] lg:w-[15%] flex justify-center items-center gap-2 px-12 py-4 rounded-lg font-semibold hover:opacity-90 active:scale-105"
             style={{ backgroundColor: item.backgroundColor }}
             key={item._id}
           >
